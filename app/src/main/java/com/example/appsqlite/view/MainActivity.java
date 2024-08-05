@@ -1,5 +1,6 @@
 package com.example.appsqlite.view;
 
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 
@@ -23,7 +24,7 @@ public class MainActivity extends AppCompatActivity
     private BancoManager dm;
     private Controle controle;
 
-    private Button buttonInserirAlunos, buttonListarAlunos, buttonInserirDisciplinas, buttonListarDisciplinas;
+    private Button buttonInserirAlunos, buttonListarAlunos, buttonInserirDisciplinas;
     private TextView textViewResultAlunos, textViewResultDisciplinas;
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -50,9 +51,6 @@ public class MainActivity extends AppCompatActivity
         buttonInserirAlunos = findViewById(R.id.btnInserirAlunos);
         buttonInserirDisciplinas = findViewById(R.id.btnInserirDisciplina);
         buttonListarAlunos = findViewById(R.id.btnListarAlunos);
-        buttonListarDisciplinas = findViewById(R.id.btnListarDisciplina);
-        textViewResultAlunos = findViewById(R.id.textViewResultadoAlunos);
-        textViewResultDisciplinas = findViewById(R.id.textViewResultadoDisciplinas);
     }
 
     public void clicar(View v)
@@ -69,28 +67,21 @@ public class MainActivity extends AppCompatActivity
         {
             adicionarDisciplina();
         }
-        if(v.getId() == R.id.btnListarDisciplina)
-        {
-            consultarDisciplinasPorAluno();
-        }
     }
 
     private void adicionarAluno()
     {
-        List<Long> retorno = controle.adicionarAluno();
-        Toast.makeText(MainActivity.this, retorno.toString(), Toast.LENGTH_SHORT).show();
+        startActivity((new Intent(MainActivity.this, CadastroAlunoActivity.class)));
     }
 
     private void consultarAlunos()
     {
-        String retorno = controle.consultarAlunos();
-        textViewResultAlunos.setText(retorno);
+        startActivity((new Intent(MainActivity.this, AlunoActivity.class)));
     }
 
     private void adicionarDisciplina()
     {
-        List<Long> retorno = controle.adicionarDisciplina();
-        Toast.makeText(MainActivity.this, retorno.toString(), Toast.LENGTH_SHORT).show();
+        startActivity((new Intent(MainActivity.this, CadastroDisciplinaActivity.class)));
     }
 
     private void consultarDisciplinasPorAluno()

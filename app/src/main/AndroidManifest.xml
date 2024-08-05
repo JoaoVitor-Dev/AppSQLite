@@ -13,6 +13,22 @@
             android:theme="@style/Theme.AppSQLite"
             tools:targetApi="31">
         <activity
+                android:name=".view.CadastroDisciplinaActivity"
+                android:exported="false" />
+        <activity
+                android:name=".view.CadastroAlunoActivity"
+                android:exported="false" />
+        <activity
+                android:name=".view.DisciplinasActivity"
+                android:exported="false" />
+        <activity
+                android:name=".view.DisciplinaActivity"
+                android:exported="false"
+                android:theme="@style/Theme.AppSQLite" />
+        <activity
+                android:name=".view.AlunoActivity"
+                android:exported="false" />
+        <activity
                 android:name=".view.MainActivity"
                 android:exported="true">
             <intent-filter>

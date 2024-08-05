@@ -8,43 +8,42 @@
         android:orientation="vertical"
         tools:context=".view.MainActivity">
 
-       <Button
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:text="Inserir alunos"
-               android:onClick="clicar"
-               android:id="@+id/btnInserirAlunos"/>
-
-    <Button
-            android:layout_width="wrap_content"
+    <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Listar alunos"
-            android:onClick="clicar"
-            android:id="@+id/btnListarAlunos"/>
+        android:orientation="horizontal"
+        android:gravity="center">
 
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textViewResultadoAlunos"
-            android:text="Resultado"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:text="Novo aluno"
+                android:onClick="clicar"
+                android:id="@+id/btnInserirAlunos"/>
 
-    <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Inserir disciplina"
-            android:id="@+id/btnInserirDisciplina"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:text="Lista de alunos"
+                android:onClick="clicar"
+                android:id="@+id/btnListarAlunos"/>
+    </LinearLayout>
 
-    <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Listar disciplina"
-            android:id="@+id/btnListarDisciplina"/>
 
-    <TextView
-            android:layout_width="wrap_content"
+    <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textViewResultadoDisciplinas"
-            android:text="Resultado"/>
+            android:orientation="horizontal"
+            android:gravity="center">
+
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:onClick="clicar"
+                android:text="Nova disciplina"
+                android:id="@+id/btnInserirDisciplina"/>
+
+    </LinearLayout>
 
 
 </LinearLayout>

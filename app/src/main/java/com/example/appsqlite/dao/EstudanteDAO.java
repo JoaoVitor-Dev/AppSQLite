@@ -48,4 +48,36 @@ public class EstudanteDAO
         cursor.close();
         return listaAlunos;
     }
+
+    public int alterarAluno(Estudante estudante)
+    {
+        ContentValues values = new ContentValues();
+        values.put(BancoContract.AlunoTable.COLUMN_NAME, estudante.getNome());
+
+        String selection = BancoContract.AlunoTable._ID + " = ?";
+        String[] selectionArgs = { String.valueOf(estudante.getId()) };
+
+        int count = db.update(
+                BancoContract.AlunoTable.TABLE_NAME,
+                values,
+                selection,
+                selectionArgs
+        );
+
+        return count;
+    }
+
+    public int deletarAluno(Estudante estudante)
+    {
+        String selection = BancoContract.AlunoTable._ID + " = ?";
+
+        String[] selectionArgs = { String.valueOf(estudante.getId()) };
+
+        int count = db.delete(BancoContract.AlunoTable.TABLE_NAME, selection, selectionArgs);
+
+        return count;
+    }
+
+
+
 }

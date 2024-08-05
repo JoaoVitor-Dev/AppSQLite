@@ -10,11 +10,13 @@ public class Estudante
 
     public Estudante(){}
 
-    public Estudante(String nome) {
+    public Estudante(String nome)
+    {
         this.nome = nome;
     }
 
-    public Estudante(long id, String nome) {
+    public Estudante(long id, String nome)
+    {
         this.id = id;
         this.nome = nome;
     }

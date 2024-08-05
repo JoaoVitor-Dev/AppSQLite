@@ -36,10 +36,10 @@ public class Controle
         return ids;
     }
 
-    public String consultarAlunos()
+    public ArrayList<Estudante> consultarAlunos()
     {
         List<Estudante> alunos = alunoDao.obterTodosAlunos();
-        return alunos.toString();
+        return (ArrayList<Estudante>) alunos;
     }
 
     public List<Long> adicionarDisciplina()
@@ -65,5 +65,10 @@ public class Controle
         List<Estudante> alunos = alunoDao.obterTodosAlunos();
         List<Disciplina> disciplinas = disciplinaDAO.listarDisciplinas(alunos.get(0));
         return disciplinas.toString();
+    }
+
+    public String alterarAluno(Estudante aluno)
+    {
+        return aluno.toString();//
     }
 }
