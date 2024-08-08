@@ -16,13 +16,14 @@ import androidx.core.view.WindowInsetsCompat;
 import com.example.appsqlite.R;
 import com.example.appsqlite.controller.Controle;
 import com.example.appsqlite.database.BancoManager;
+import com.example.appsqlite.entities.Estudante;
 
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity
 {
     private BancoManager dm;
-    private Controle controle;
+    public Controle controle;
 
     private Button buttonInserirAlunos, buttonListarAlunos, buttonInserirDisciplinas;
     private TextView textViewResultAlunos, textViewResultDisciplinas;
@@ -43,7 +44,6 @@ public class MainActivity extends AppCompatActivity
         dm = new BancoManager(this);
         SQLiteDatabase db = dm.open();
         controle = new Controle(db);
-
     }
 
     private void setup()
