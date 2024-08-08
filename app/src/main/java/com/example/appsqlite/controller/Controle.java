@@ -58,12 +58,13 @@ public class Controle implements Serializable
         return ids;
     }
 
-    public String consultarDisciplinasPorAluno()
+    public List<Disciplina> consultarDisciplinasPorAluno()
     {
         List<Estudante> alunos = alunoDao.obterTodosAlunos();
         List<Disciplina> disciplinas = disciplinaDAO.listarDisciplinas(alunos.get(0));
-        return disciplinas.toString();
+        return disciplinas;
     }
+
 
     public String alterarAluno(Estudante aluno)
     {

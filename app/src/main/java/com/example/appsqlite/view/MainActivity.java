@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity
     private BancoManager dm;
     public Controle controle;
 
-    private Button buttonInserirAlunos, buttonListarAlunos, buttonInserirDisciplinas;
+    private Button buttonInserirAlunos, buttonListarAlunos, buttonInserirDisciplinas, buttonListaDisciplinas;
     private TextView textViewResultAlunos, textViewResultDisciplinas;
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -67,6 +67,10 @@ public class MainActivity extends AppCompatActivity
         {
             adicionarDisciplina();
         }
+        if (v.getId() ==  R.id.btnListaDisciplinas)
+        {
+            consultarDisciplinas();
+        }
     }
 
     private void adicionarAluno()
@@ -84,9 +88,14 @@ public class MainActivity extends AppCompatActivity
         startActivity((new Intent(MainActivity.this, CadastroDisciplinaActivity.class)));
     }
 
+    private void consultarDisciplinas()
+    {
+        startActivity((new Intent(MainActivity.this, DisciplinasActivity.class)));
+    }
+
     private void consultarDisciplinasPorAluno()
     {
-        String retorno = controle.consultarDisciplinasPorAluno();
-        textViewResultDisciplinas.setText(retorno);
+        //String retorno = controle.consultarDisciplinasPorAluno();
+        //textViewResultDisciplinas.setText(retorno);
     }
 }

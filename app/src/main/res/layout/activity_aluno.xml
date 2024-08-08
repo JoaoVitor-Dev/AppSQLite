@@ -22,12 +22,14 @@ tools:context=".view.AlunoActivity">
         android:layout_height="560dp"
         android:paddingTop="5dp" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
             android:id="@+id/btnVoltar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Voltar"
+            android:layout_margin="5dp"
             android:textSize="15sp"
+            style="@style/Widget.MaterialComponents.Button"
             />
 
 

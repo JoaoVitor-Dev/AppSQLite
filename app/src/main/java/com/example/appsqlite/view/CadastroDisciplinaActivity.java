@@ -31,10 +31,8 @@ public class CadastroDisciplinaActivity extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro_disciplina);
-        setup();
 
-        //Intent intent = getIntent();
-        //controle = intent.getParcelableExtra("controle");
+        setup();
 
         btnVoltar.setOnClickListener(v -> startActivity(new Intent(CadastroDisciplinaActivity.this, MainActivity.class)));
 

@@ -8,8 +8,30 @@
         android:orientation="vertical"
         tools:context=".view.DisciplinasActivity">
 
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lista de disciplinas"
+            android:gravity="center"
+            android:textSize="25dp"
+            android:layout_margin="20dp"
+            />
 
+    <ListView
+            android:id="@+id/listViewDisciplinas"
+            android:layout_width="match_parent"
+            android:layout_height="560dp"
+            android:paddingTop="5dp" />
 
+    <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnVoltar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Voltar"
+            android:layout_margin="5dp"
+            android:textSize="15sp"
+            style="@style/Widget.MaterialComponents.Button"
+            />
 
 
 </LinearLayout>

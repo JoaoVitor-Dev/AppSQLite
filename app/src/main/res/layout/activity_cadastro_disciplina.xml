@@ -45,21 +45,26 @@
             android:layout_marginLeft="20dp"
             />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
             android:layout_marginTop="20dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/btnSalvar"
             android:text="Salvar"
+            style="@style/Widget.MaterialComponents.Button"
             />
 
 
 
-    <Button
+    <com.google.android.material.button.MaterialButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="5dp"
             android:id="@+id/btnVoltar"
             android:text="Voltar"
+            style="@style/Widget.MaterialComponents.Button"
             />
 
 </LinearLayout>

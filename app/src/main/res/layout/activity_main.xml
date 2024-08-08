@@ -17,49 +17,51 @@
             android:layout_margin="20dp"
             />
 
-    <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center">
-
-        <Button
-                android:layout_width="wrap_content"
-                android:layout_height="60dp"
+        <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
                 android:text="Novo aluno"
                 android:onClick="clicar"
-                android:id="@+id/btnInserirAlunos"/>
+                android:id="@+id/btnInserirAlunos"
+                style="@style/Widget.MaterialComponents.Button"/>
 
-        <Button
-                android:layout_width="wrap_content"
-                android:layout_height="60dp"
-                android:text="Lista de alunos"
+        <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Alunos cadastrados"
                 android:onClick="clicar"
-                android:id="@+id/btnListarAlunos"/>
-    </LinearLayout>
+                android:id="@+id/btnListarAlunos"
+                style="@style/Widget.MaterialComponents.Button"/>
 
-
-    <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center">
-
-        <Button
-                android:layout_width="wrap_content"
-                android:layout_height="60dp"
+        <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
                 android:onClick="clicar"
                 android:text="Nova disciplina"
-                android:id="@+id/btnInserirDisciplina"/>
+                android:id="@+id/btnInserirDisciplina"
+                style="@style/Widget.MaterialComponents.Button"/>
 
-        <Button
-                android:layout_width="wrap_content"
-                android:layout_height="60dp"
-                android:text="Fechar"
+    <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:onClick="clicar"
+            android:text="Disciplinas por aluno"
+            android:id="@+id/btnListaDisciplinas"
+            style="@style/Widget.MaterialComponents.Button"/>
+
+        <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_margin="5dp"
+                android:layout_height="wrap_content"
+                android:text="Sair do aplicativo"
                 android:onClick="clicar"
-                android:id="@+id/btnSair"/>
+                android:id="@+id/btnSair"
+                style="@style/Widget.MaterialComponents.Button"/>
 
-    </LinearLayout>
 
 
 </LinearLayout>
